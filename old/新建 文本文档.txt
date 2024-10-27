@@ -1,0 +1,122 @@
+|   iter    |  target   | max_depth | max_fe... | min_sa... | n_esti... |
+-------------------------------------------------------------------------
+| 1         | 0.8786    | 9.17      | 0.7476    | 2.003     | 82.56     |
+| 2         | 0.8808    | 6.468     | 0.183     | 6.284     | 92.93     |
+| 3         | 0.8799    | 8.968     | 0.5844    | 11.64     | 174.5     |
+| 4         | 0.8765    | 7.045     | 0.8894    | 2.63      | 170.9     |
+| 5         | 0.8779    | 9.173     | 0.6023    | 5.229     | 57.54     |
+| 6         | 0.8758    | 7.208     | 0.3723    | 6.678     | 93.16     |
+| 7         | 0.8825    | 9.426     | 0.4717    | 14.6      | 188.6     |
+| 8         | 0.8815    | 11.23     | 0.3007    | 24.06     | 203.1     |
+| 9         | 0.8733    | 5.212     | 0.8263    | 24.19     | 178.5     |
+| 10        | 0.8853    | 8.644     | 0.1201    | 5.506     | 243.2     |
+| 11        | 0.8851    | 6.935     | 0.1175    | 6.095     | 93.02     |
+| 12        | 0.884     | 8.891     | 0.2791    | 14.29     | 188.1     |
+| 13        | 0.8773    | 8.249     | 0.6716    | 11.21     | 190.4     |
+| 14        | 0.8758    | 9.259     | 0.9858    | 14.29     | 189.5     |
+| 15        | 0.8831    | 8.972     | 0.2746    | 3.216     | 92.79     |
+| 16        | 0.8764    | 5.095     | 0.5946    | 5.726     | 124.7     |
+| 17        | 0.8792    | 8.324     | 0.5358    | 11.59     | 207.0     |
+| 18        | 0.8802    | 7.341     | 0.5019    | 14.65     | 237.8     |
+| 19        | 0.8767    | 6.179     | 0.5949    | 13.3      | 45.03     |
+| 20        | 0.8796    | 8.835     | 0.7754    | 3.472     | 92.62     |
+| 21        | 0.8856    | 11.14     | 0.1001    | 24.01     | 202.9     |
+| 22        | 0.8781    | 6.808     | 0.3443    | 20.48     | 165.5     |
+| 23        | 0.8793    | 9.04      | 0.6714    | 13.76     | 188.2     |
+| 24        | 0.8845    | 8.424     | 0.2009    | 14.8      | 187.9     |
+| 25        | 0.8794    | 13.18     | 0.247     | 2.346     | 48.64     |
+| 26        | 0.8784    | 14.86     | 0.7368    | 15.4      | 189.1     |
+| 27        | 0.8838    | 13.99     | 0.5065    | 11.18     | 84.77     |
+| 28        | 0.8819    | 8.682     | 0.1854    | 5.809     | 243.2     |
+| 29        | 0.8796    | 14.94     | 0.33      | 16.23     | 98.76     |
+| 30        | 0.8808    | 6.976     | 0.1945    | 5.67      | 93.01     |
+{'target': 0.8855729784155457, 'params': {'max_depth': 11.143270993222512, 'max_features': 0.10005122643418952, 'min_samples_split': 24.014449000172128, 'n_estimators': 202.86805413691235}}
+
+ic| "rf": 'rf'
+    accuracy_score(aaindex1_y_test, rf_aaindex1_y_pred): 0.8959700093720713
+ic| "matthews_corrcoef": 'matthews_corrcoef'
+    matthews_corrcoef(aaindex1_y_test, rf_aaindex1_y_pred): 0.7914009545218907
+ic| "f1_score": 'f1_score'
+    f1_score(aaindex1_y_test, rf_aaindex1_y_pred): 0.9013333333333333
+ic| "roc_auc_score": 'roc_auc_score'
+    roc_auc_score(aaindex1_y_test, rf_aaindex1_y_pred): 0.8959836510724136
+
+ic| "knn": 'knn'
+    accuracy_score(aaindex1_y_test, knn_aaindex1_y_pred): 0.8388003748828491
+ic| "matthews_corrcoef": 'matthews_corrcoef'
+    matthews_corrcoef(aaindex1_y_test, knn_aaindex1_y_pred): 0.6788046669723867
+ic| "f1_score": 'f1_score'
+    f1_score(aaindex1_y_test, knn_aaindex1_y_pred): 0.8436363636363636
+ic| "roc_auc_score": 'roc_auc_score'
+    roc_auc_score(aaindex1_y_test, knn_aaindex1_y_pred): 0.8400337134917444
+
+ic| "lr": 'lr'
+    accuracy_score(aaindex1_y_test, lr_aaindex1_y_pred): 0.8744142455482662
+ic| "matthews_corrcoef": 'matthews_corrcoef'
+    matthews_corrcoef(aaindex1_y_test, lr_aaindex1_y_pred): 0.7484294053249781
+ic| "f1_score": 'f1_score'
+    f1_score(aaindex1_y_test, lr_aaindex1_y_pred): 0.8803571428571428
+ic| "roc_auc_score": 'roc_auc_score'
+    roc_auc_score(aaindex1_y_test, lr_aaindex1_y_pred): 0.8746341239781921
+
+ic| "svm": 'svm'
+    accuracy_score(aaindex1_y_test, svm_aaindex1_y_pred): 0.8125585754451734
+ic| "matthews_corrcoef": 'matthews_corrcoef'
+    matthews_corrcoef(aaindex1_y_test, svm_aaindex1_y_pred): 0.6329457510347984
+ic| "f1_score": 'f1_score'
+    f1_score(aaindex1_y_test, svm_aaindex1_y_pred): 0.8109640831758034
+ic| "roc_auc_score": 'roc_auc_score'
+    roc_auc_score(aaindex1_y_test, svm_aaindex1_y_pred): 0.8161010135206619
+
+ic| "ada": 'ada'
+    accuracy_score(aaindex1_y_test, ada_aaindex1_y_pred): 0.8828491096532334
+ic| "matthews_corrcoef": 'matthews_corrcoef'
+    matthews_corrcoef(aaindex1_y_test, ada_aaindex1_y_pred): 0.7650802432703089
+ic| "f1_score": 'f1_score'
+    f1_score(aaindex1_y_test, ada_aaindex1_y_pred): 0.8888888888888888
+ic| "roc_auc_score": 'roc_auc_score'
+    roc_auc_score(aaindex1_y_test, ada_aaindex1_y_pred): 0.8828138775452629
+
+ic| "gb": 'gb'
+    accuracy_score(aaindex1_y_test, gb_aaindex1_y_pred): 0.9062792877225867
+ic| "matthews_corrcoef": 'matthews_corrcoef'
+    matthews_corrcoef(aaindex1_y_test, gb_aaindex1_y_pred): 0.8119695626901203
+ic| "f1_score": 'f1_score'
+    f1_score(aaindex1_y_test, gb_aaindex1_y_pred): 0.9113475177304965
+ic| "roc_auc_score": 'roc_auc_score'
+    roc_auc_score(aaindex1_y_test, gb_aaindex1_y_pred): 0.9061594126235163
+
+
+    new test console
+ic| accuracy_score(test_target, rfpred): 0.9058988764044944
+ic| f1_score(test_target, rfpred): 0.9124183006535947
+ic| matthews_corrcoef(test_target, rfpred): 0.8115616594118534
+ic| roc_auc_score(test_target, rfpred): 0.907063226628444
+ic| accuracy_score(test_target, gbdtpred): 0.9199438202247191
+ic| f1_score(test_target, gbdtpred): 0.9260700389105059
+ic| matthews_corrcoef(test_target, gbdtpred): 0.8390783539984173
+ic| roc_auc_score(test_target, gbdtpred): 0.9204252269469659
+ic| accuracy_score(test_target, lrpred): 0.8834269662921348
+ic| f1_score(test_target, lrpred): 0.8906455862977603
+ic| matthews_corrcoef(test_target, lrpred): 0.7673836388995344
+ic| roc_auc_score(test_target, lrpred): 0.8851966873706004
+ic| accuracy_score(test_target, knnpred): 0.8426966292134831
+ic| f1_score(test_target, knnpred): 0.8514588859416445
+ic| matthews_corrcoef(test_target, knnpred): 0.6865579768683806
+ic| roc_auc_score(test_target, knnpred): 0.8447682752030578
+ic| accuracy_score(test_target, svmpred): 0.8230337078651685
+ic| f1_score(test_target, svmpred): 0.8240223463687151
+ic| matthews_corrcoef(test_target, svmpred): 0.6594651332875079
+ic| roc_auc_score(test_target, svmpred): 0.8300684822423953
+ic| accuracy_score(test_target, adapred): 0.8834269662921348
+ic| f1_score(test_target, adapred): 0.891218872870249
+ic| matthews_corrcoef(test_target, adapred): 0.766668425707441
+ic| roc_auc_score(test_target, adapred): 0.8846551998725911
+
+cross validation
+ic| cross_val_score(rf, test_data, test_target, cv=5): array([0.88111888, 0.92307692, 0.91549296, 0.85915493, 0.86619718])
+ic| cross_val_score(gbdt, test_data, test_target, cv=5): array([0.8951049 , 0.8951049 , 0.90140845, 0.85211268, 0.83098592])
+ic| cross_val_score(lr, test_data, test_target, cv=5): array([0.87412587, 0.9020979 , 0.88732394, 0.85915493, 0.85915493])
+ic| cross_val_score(knn, test_data, test_target, cv=5): array([0.81118881, 0.8041958 , 0.88028169, 0.82394366, 0.81690141])
+ic| cross_val_score(svm, test_data, test_target, cv=5): array([0.72027972, 0.6993007 , 0.79577465, 0.68309859, 0.71126761])
+ic| cross_val_score(ada, test_data, test_target, cv=5): array([0.83916084, 0.8951049 , 0.88028169, 0.86619718, 0.84507042])
