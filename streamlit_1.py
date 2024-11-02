@@ -43,11 +43,11 @@ import json
 import os  
  #加载模型 
 def load_rf_model():  
-    model_path = "C:\\Users\\86151\\Desktop\\基于机器学习的抗菌肽预测模型\\代码和数据\\rf_model.pkl"  
+    model_path = "rf_model.pkl"  
     model = joblib.load(model_path)  
     return model
 def load_gb_model():  
-    model_path = "C:\\Users\\86151\\Desktop\\基于机器学习的抗菌肽预测模型\\代码和数据\\gb_model.pkl"  
+    model_path = "gb_model.pkl"  
     model = joblib.load(model_path)  
     return model
 
@@ -61,15 +61,15 @@ def _feaprocess(data):#数据处理
     test_data = np.concatenate(
         (test_data_aaindex1, test_data_ng, test_data_ctd, test_data_atc), axis=1#四个特征向量拼接到一起
     )
-    indices = pd.read_csv("C:\\Users\\86151\\Desktop\\基于机器学习的抗菌肽预测模型\\代码和数据\\train_data\\indices_df.csv", header=None)
+    indices = pd.read_csv("./train_data/indices_df.csv", header=None)
     indices = indices.iloc[:, 0]
     indices = np.array(indices)
     indices = indices.tolist()
     test_data = test_data[:, indices]
 
-    train_data = pd.read_csv("C:\\Users\\86151\\Desktop\\基于机器学习的抗菌肽预测模型\\代码和数据\\train_data\\reduced_df.csv", header=None)
+    train_data = pd.read_csv("./train_data/reduced_df.csv", header=None)
     train_data = np.array(train_data)
-    train_target = pd.read_csv("C:\\Users\\86151\\Desktop\\基于机器学习的抗菌肽预测模型\\代码和数据\\train_data\\isAMP.csv", header=None)
+    train_target = pd.read_csv("./train_data/isAMP.csv", header=None)
     train_target = train_target.iloc[:, 0]
     train_target = np.array(train_target)
 
@@ -98,7 +98,7 @@ def add_bg_from_local(image_file):#背景
     """,
     unsafe_allow_html=True
     )
-add_bg_from_local("C:\\Users\\86151\\Desktop\\基于机器学习的抗菌肽预测模型\\代码和数据\\DNA.jpg")
+add_bg_from_local("DNA.jpg")
 colindex = 0
 
 # st.balloons()
@@ -229,19 +229,19 @@ with tab3:
     label="下载训练集数据",  
     data=df.to_csv(index=False).encode('utf-8'),  
     file_name="train_data.csv",  
-    mime="C:\\Users\\86151\\Desktop\\基于机器学习的抗菌肽预测模型\\代码和数据\\train_data\\reduced_df.csv"
+    mime="./train_data/reduced_df.csv"
     )
     st.download_button(  
     label="下载训练集数标签",  
     data=df.to_csv(index=False).encode('utf-8'),  
     file_name="train_target.csv",  
-    mime="C:\\Users\\86151\\Desktop\\基于机器学习的抗菌肽预测模型\\代码和数据\\train_data\\isAMP.csv"
+    mime="./train_data/isAMP.csv"
     )
     st.download_button(  
     label="下载特征选取所用数据",  
     data=df.to_csv(index=False).encode('utf-8'),  
     file_name="indices_df.csv",  
-    mime="C:\\Users\\86151\\Desktop\\基于机器学习的抗菌肽预测模型\\代码和数据\\train_data\\indices_df.csv"
+    mime="./train_data/indices_df.csv"
     )
 with tab4:
     st.subheader('📚使用说明')
