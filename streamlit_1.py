@@ -1,6 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as html
-from protlearn.features import (
+from protlearn import (
     paac,
     aac,
     aaindex1,
